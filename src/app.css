@@ -1,0 +1,7 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    font-family: 'Sora', sans-serif;
+    min-height: 100vh;
+}
