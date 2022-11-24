@@ -40,7 +40,6 @@ const StyledButton = styled(Button)`
   font-weight: bold !important;
 `
 const StyleWrapper = styled.div`
-  /* height: 150vh; */
   margin-top: 60px;
   padding: 60px 20px;
   @media screen and (max-width: 480px) {
