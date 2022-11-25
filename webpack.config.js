@@ -21,8 +21,7 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: './src/index.html',
-      favicon:
-        'https://ps.w.org/custom-contact-details-with-wp-list/assets/icon-256x256.png',
+      favicon: './public/fav.ico',
     }),
 
     new ForkTsCheckWebpackPlugin(),
