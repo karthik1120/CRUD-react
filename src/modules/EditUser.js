@@ -21,7 +21,7 @@ const EditUser = () => {
     navigate('/')
   }
 
-  return <UserDetailsForm onSubmit={onSubmit} />
+  return <UserDetailsForm onSubmit={onSubmit} actionType />
 }
 
 export default EditUser

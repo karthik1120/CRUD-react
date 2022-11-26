@@ -10,7 +10,7 @@ import {
   AlignCenter,
 } from './Styles'
 
-const UserDetailsForm = ({ onSubmit }) => {
+const UserDetailsForm = ({ onSubmit, actionType = '' }) => {
   const {
     register,
     handleSubmit,
@@ -29,7 +29,7 @@ const UserDetailsForm = ({ onSubmit }) => {
   return (
     <StyledUserWrapper>
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-        <LabelWrapper>Create Employee</LabelWrapper>
+        <LabelWrapper>{actionType ? 'update' : 'create'} Employee</LabelWrapper>
         <TextField
           defaultValue={name}
           label="Name"
@@ -38,8 +38,8 @@ const UserDetailsForm = ({ onSubmit }) => {
           {...register('name', {
             required: 'Valid Name required!',
             pattern: {
-              value: /^[A-Z0-9._%+-]{2,}$/i,
-              message: 'Invalid name address',
+              value: /^[A-Z0-9._%+-\s]{2,}$/i,
+              message: 'Invalid name',
             },
           })}
           error={!!errors?.name}
@@ -62,7 +62,7 @@ const UserDetailsForm = ({ onSubmit }) => {
         />
         <AlignCenter>
           <Button type="submit" variant="contained" color="primary">
-            add employee
+            {actionType ? 'update' : 'add'} employee
           </Button>
         </AlignCenter>
       </FormWrapper>
